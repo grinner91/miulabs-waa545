@@ -1,0 +1,45 @@
+LAB 1
+ 
+This lab you will create a spring boot application from scratch. This will help you practice more and get a better grip of designing a n-tier web application. You should implement the following:
+1-	Make a domain model using the domain model.
+
+public class Post {
+
+    long id;
+    String title;
+    String content;
+    String author;
+
+}
+
+2-	Make a repository with a fake database (using an ArrayList). This database will hold the Posts. 
+3-	Make a service layer that will inject the repository.
+4-	Make a RestController that will inject the service and respond to the following requests.
+a.	GET	localhost:8080/posts/	 This should retrieve all the posts in the database.
+b.	GET	localhost:8080/posts/1	 This should retrieve the post with id = 1.
+c.	POST	localhost:8080/posts/	 This should create and save a new post. 
+
+Note: 
+-	1 is just an example, the actual path should ask for ‘id’
+-	Make sure all your data are passed with Dtos
+-	Follow the n-tier architecture
+
+Optional
+
+d.	DELETE ocalhost:8080/posts/1	 This should delete the post where id = 1.
+e.	UPDATE localhost:8080/posts/1	 This should update the post where id = 1.
+
+a.	Make another version of your api using a ‘customized header’ that will retrieve another version of the Post domain model, as the following: 
+b.	Apply the ModelMapper when you are passing your dtos
+c.	Create a filter endpoint that will retrieve all Posts made by an ‘author’ (query parameter) – You may apply any standard if it is structured and manageable.
+
+
+public class PostV2 {
+
+    long id;
+    String title;
+    String content;
+    String author;
+
+}
+ Make sure you execute these requests using postman.  
