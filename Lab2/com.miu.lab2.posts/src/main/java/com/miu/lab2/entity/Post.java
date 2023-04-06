@@ -23,6 +23,7 @@ public class Post {
     private Date createdDate;
 
     @ManyToOne
+
     @JsonBackReference
     private User user;
 }

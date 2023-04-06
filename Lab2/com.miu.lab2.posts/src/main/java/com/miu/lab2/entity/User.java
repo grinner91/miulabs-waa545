@@ -17,7 +17,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
     String name;
-    @OneToMany
-    @JoinColumn(name = "id")
+    @OneToMany()
+    @JoinColumn(name = "user_id")
     List<Post> posts;
 }
