@@ -1,5 +1,7 @@
 package com.miu.lab2.service;
 
+import com.miu.lab2.aspect.annotation.Lab4ExecutionTime;
+import com.miu.lab2.aspect.annotation.Lab4LogInfo;
 import com.miu.lab2.dto.CommentDto;
 import com.miu.lab2.dto.PostDto;
 import com.miu.lab2.dto.UserDto;
@@ -22,6 +24,8 @@ public class UserService implements  IUserService{
     private IPostRepository postRepository;
 
     private ModelMapper modelMapper = new ModelMapper();
+
+    @Lab4LogInfo
     @Override
     public List<UserDto> findAll() {
 
@@ -34,9 +38,10 @@ public class UserService implements  IUserService{
         return usersDto;
     }
 
+    @Lab4ExecutionTime
     @Override
     public UserDto findById(int id) {
-        var user = userRepository.findById(id);
+        var user = userRepository.findById(id).get();
         return modelMapper.map(user, UserDto.class);
     }
 

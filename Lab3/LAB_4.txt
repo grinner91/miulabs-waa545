@@ -1,0 +1,24 @@
+LAB 4
+CS545 - AOP
+
+This lab you will continue your previous lab that contains the User, Post, and Comments entities. You will be adding some cross-cutting concerns:
+
+
+
+1-	Make a ‘Logger’ database table that will store all the operations executed in your project. The table should hold the following information (Transaction Id, Date, Time, Principle, Operation). 
+  Since there is no authentication, you may define a fake static user for the principle and add it to every operation. This will be removed on the next lab. You may optionally add any suitable attribute.
+
+
+2-	Make an Aspect that has an annotation pointcut @ExecutionTime, when placed on a method, it should calculate the time taken to complete that method. 
+Add the annotation to the Get User By Id method in your project. 
+
+
+
+
+Optional
+
+3-	Make an ‘Exception’ database table that will track all the exceptions that were thrown (Transaction Id, Date, Time, Principle, Operation, Exception Type). 
+Add a method that throws an exception to test it.
+
+
+Make sure you execute all these requests using postman that follow best practices and conventions.
