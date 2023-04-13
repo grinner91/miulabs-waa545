@@ -1,10 +1,8 @@
 package com.miu.lab2.service;
 
-import com.miu.lab2.dto.CommentDto;
-import com.miu.lab2.dto.PostDto;
-import com.miu.lab2.dto.UserDto;
-import com.miu.lab2.entity.Post;
-import org.springframework.web.bind.annotation.PathVariable;
+import com.miu.lab2.entity.dto.CommentDto;
+import com.miu.lab2.entity.dto.PostDto;
+import com.miu.lab2.entity.dto.UserDto;
 
 import java.util.List;
 

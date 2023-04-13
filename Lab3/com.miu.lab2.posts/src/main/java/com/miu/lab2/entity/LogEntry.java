@@ -11,7 +11,7 @@ import java.util.Date;
 @AllArgsConstructor
 @Setter
 @Getter
-@Table(name = "Logger")
+@Table(name = "Loggers")
 public class LogEntry {
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY)

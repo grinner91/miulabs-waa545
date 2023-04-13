@@ -18,6 +18,5 @@ public class User {
     long id;
     String name;
     @OneToMany()
-    @JoinColumn(name = "user_id")
     List<Post> posts;
 }

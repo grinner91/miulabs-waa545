@@ -1,8 +1,6 @@
 package com.miu.lab2.service;
 
-import com.miu.lab2.dto.PostDto;
-import com.miu.lab2.dto.UserDto;
-import com.miu.lab2.entity.Post;
+import com.miu.lab2.entity.dto.PostDto;
 
 import java.util.List;
 

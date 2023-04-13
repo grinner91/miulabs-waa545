@@ -1,9 +1,8 @@
 package com.miu.lab2.controllers;
 
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.miu.lab2.aspect.annotation.Lab4ExecutionTime;
 import com.miu.lab2.aspect.annotation.Lab4LogInfo;
-import com.miu.lab2.dto.CommentDto;
+import com.miu.lab2.entity.dto.CommentDto;
 import com.miu.lab2.service.ICommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

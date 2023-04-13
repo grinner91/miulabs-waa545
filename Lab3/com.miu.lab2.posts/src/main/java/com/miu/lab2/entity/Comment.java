@@ -9,6 +9,7 @@ import lombok.*;
 @AllArgsConstructor
 @Setter
 @Getter
+@Table(name = "comments")
 public class Comment {
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY)

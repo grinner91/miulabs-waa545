@@ -2,18 +2,14 @@ package com.miu.lab2.controllers;
 
 import com.miu.lab2.aspect.annotation.Lab4ExecutionTime;
 import com.miu.lab2.aspect.annotation.Lab4LogInfo;
-import com.miu.lab2.dto.CommentDto;
-import com.miu.lab2.dto.PostDto;
-import com.miu.lab2.dto.UserDto;
-import com.miu.lab2.entity.Post;
-import com.miu.lab2.entity.User;
+import com.miu.lab2.entity.dto.CommentDto;
+import com.miu.lab2.entity.dto.PostDto;
+import com.miu.lab2.entity.dto.UserDto;
 import com.miu.lab2.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.function.EntityResponse;
 
 import java.util.List;
 

@@ -52,3 +52,59 @@ public class LoggerAspect {
        loggerRepository.save(log);
     }
 }
+
+
+
+/*
+ import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class EmployeeControllerAspect {
+
+    @After("@annotation(Alert) &&
+    (execution(* create*(..))
+    || execution(* delete*(..))
+    || execution(* update*(..)))")
+    public void sendAlert(JoinPoint joinPoint) {
+        // implementation to send alert ...
+        System.out.println("Alert: EmployeeController " + joinPoint.getSignature().getName() + " method has been called.");
+    }
+}
+
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class EmployeeControllerAspect {
+
+    @After("@annotation(Alert) && execution(* EmployeeController.create*(..))")
+    public void sendAlertOnCreate(JoinPoint joinPoint) {
+        // implementation to send alert on create method...
+        System.out.println("Alert: EmployeeController create method has been called.");
+    }
+
+    @After("@annotation(Alert) && execution(* EmployeeController.delete*(..))")
+    public void sendAlertOnDelete(JoinPoint joinPoint) {
+        // implementation to send alert on delete method...
+        System.out.println("Alert: EmployeeController delete method has been called.");
+    }
+
+    @After("@annotation(Alert) && execution(* EmployeeController.update*(..))")
+    public void sendAlertOnUpdate(JoinPoint joinPoint) {
+        // implementation to send alert on update method...
+        System.out.println("Alert: EmployeeController update method has been called.");
+    }
+}
+
+
+
+
+ */

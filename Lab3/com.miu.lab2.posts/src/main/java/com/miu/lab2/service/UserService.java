@@ -2,9 +2,9 @@ package com.miu.lab2.service;
 
 import com.miu.lab2.aspect.annotation.Lab4ExecutionTime;
 import com.miu.lab2.aspect.annotation.Lab4LogInfo;
-import com.miu.lab2.dto.CommentDto;
-import com.miu.lab2.dto.PostDto;
-import com.miu.lab2.dto.UserDto;
+import com.miu.lab2.entity.dto.CommentDto;
+import com.miu.lab2.entity.dto.PostDto;
+import com.miu.lab2.entity.dto.UserDto;
 import com.miu.lab2.entity.User;
 import com.miu.lab2.repository.IPostRepository;
 import com.miu.lab2.repository.IUserRepository;
@@ -118,4 +118,32 @@ public class UserService implements  IUserService{
                 .distinct()
                 .toList();
     }
+
+
+/*
+    @GetMapping("/projects")
+    public List<Project> searchProjectsByCriteria(
+            @RequestParam("employeeId") Long employeeId,
+            @RequestParam("projectName") String projectName,
+            @RequestParam("estimatedDays") int estimatedDays,
+            @RequestParam("location") String location) {
+
+        CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Project> query = cb.createQuery(Project.class);
+        Root<Project> root = query.from(Project.class);
+
+        query.select(root)
+                .distinct(true)
+                .where(cb.and(
+                        cb.equal(root.join("employees").get("id"), employeeId),
+                        cb.like(root.get("name"), "%" + projectName + "%"),
+                        cb.ge(root.get("estimatedDays"), estimatedDays),
+                        cb.equal(root.get("location"), location)
+                ));
+
+        return entityManager.createQuery(query).getResultList();
+    }
+
+
+ */
 }

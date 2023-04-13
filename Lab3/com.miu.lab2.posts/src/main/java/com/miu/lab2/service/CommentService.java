@@ -1,6 +1,6 @@
 package com.miu.lab2.service;
 
-import com.miu.lab2.dto.CommentDto;
+import com.miu.lab2.entity.dto.CommentDto;
 import com.miu.lab2.entity.Comment;
 import com.miu.lab2.repository.ICommentRepository;
 import com.miu.lab2.repository.IPostRepository;

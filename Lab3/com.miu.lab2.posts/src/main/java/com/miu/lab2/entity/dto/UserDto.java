@@ -1,4 +1,4 @@
-package com.miu.lab2.dto;
+package com.miu.lab2.entity.dto;
 
 import lombok.*;
 
@@ -9,5 +9,7 @@ import lombok.*;
 @Data
 public class UserDto {
     long id;
-    String name;
+    private String email;
+    private String firstname;
+    private String lastname;
 }

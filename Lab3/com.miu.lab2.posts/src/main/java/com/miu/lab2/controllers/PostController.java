@@ -3,7 +3,7 @@ package com.miu.lab2.controllers;
 import com.miu.lab2.aspect.annotation.Lab4ExecutionTime;
 import com.miu.lab2.aspect.annotation.Lab4LogInfo;
 import com.miu.lab2.service.IPostService;
-import com.miu.lab2.dto.PostDto;
+import com.miu.lab2.entity.dto.PostDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -17,12 +17,18 @@ import java.util.List;
 @Table(name = "users")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     long id;
-    String name;
+    private String email;
+    private String password;
+    private String firstname;
+    private String lastname;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable
+    private List<Role> roles;
 
     @OneToMany( cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
     @Fetch(FetchMode.SUBSELECT)
     @JsonBackReference
     List<Post> posts;

@@ -1,4 +1,4 @@
-package com.miu.lab2.dto;
+package com.miu.lab2.entity.dto;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

@@ -20,4 +20,7 @@ public interface IUserRepository extends CrudRepository<User, Integer> {
     public List<User> findUsersWithPosts(int count);
 
 
+   User findByEmail(String email);
+
+
 }
